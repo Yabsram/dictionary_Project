@@ -1,5 +1,5 @@
 def get_user_input():
-    SENTINEL = "toyota"
+    SENTINEL = "q"
     #print(f"Enter words one by one. Type `{SENTINEL}` to finish.")
     words = []
 
@@ -9,7 +9,7 @@ def get_user_input():
             break
         else:
             print("Invalid sentence. Try again.")
-            
+
     print(f"Enter words one by one. Type `{SENTINEL}` to finish.")
     while True:
         word = input("Enter a word: ").strip()
