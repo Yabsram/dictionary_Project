@@ -20,7 +20,6 @@ def get_response(content):
                                 """),
         contents=content,
     )
-
     return response.text
 
 def complete_sentence(sentence, synonym_dict):
