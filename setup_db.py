@@ -28,4 +28,3 @@ def init_db():
    with engine.connect() as connection:
       query_result = connection.execute(db.text(create_table_sql))
       connection.commit()
-
