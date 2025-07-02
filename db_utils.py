@@ -52,3 +52,12 @@ def print_entire_table():
                 print(" | ".join(str(value) if value is not None else "NULL" for value in row))
     except OperationalError:
         print("Synonym history does not exist. Please look up words first.")
+
+def clear_table_allwords():
+    try:
+        with engine.connect() as connection:
+            connection.execute(db.text("DELETE FROM table_allwords"))
+            connection.commit()
+        print("Table has been cleared.")
+    except OperationalError:
+        print("Synonym history does not exist. Please look up words first.")

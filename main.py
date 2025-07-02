@@ -2,7 +2,7 @@ import sys
 from gen_api import complete_sentence
 from words_api import get_all_synonyms
 from user_input import get_user_input
-from db_utils import store_synonyms, fetch_all_synonyms, print_entire_table
+from db_utils import store_synonyms, fetch_all_synonyms, print_entire_table, clear_table_allwords
 from setup_db import init_db
 
 def main():
@@ -10,6 +10,7 @@ def main():
         nav = input("\nWhat would you like to do? Select a number below.\n"
                 "1 - Find a word\n"
                 "2 - View synonym history\n"
+                "3 - Clear synonym history\n"
                 "0 - Terminate program\n"
                 "Enter choice: ").strip()
         if nav == "1":
@@ -27,12 +28,23 @@ def main():
         elif nav == "2":
             #View synonym history
             print_entire_table()
+        elif nav == "3":
+            #Clear synonym history
+            while True:
+                ready = input("Are you sure you want to clear synonym history? (y/n): ")
+                if ready == "y":
+                    clear_table_allwords()
+                    break
+                elif ready == "n":
+                    break
+                else:
+                    print("Invalid input. Please select y (yes) or n (no).")
         elif nav == "0":
             #Exiting the program
             print("Exiting program.")
             sys.exit(0)
         else:
-            print("Invalid input. Please enter 1, 2, or 0.")
+            print("Invalid input. Please enter 1, 2, 3, or 0.")
 
 
     #ask if they want to find another synonym, view synonym history, or teminate program
