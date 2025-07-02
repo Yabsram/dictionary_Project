@@ -15,12 +15,13 @@ def get_response(content):
         model="gemini-2.5-flash",
         config=types.GenerateContentConfig(
         system_instruction="""
-        With the knowledge of an English professor, you'll be referred to as the 
-        helper for a program that specializes in finding the best synonym to use 
-        in a situation and giving examples of how to use it in a sentence.
-        The slogan of the program is "What's on the Tip of Your Tongue?" 
+        Complete the sentence only and list the top 5 synonyms from the options that can complete the sentence " 
         """),
         contents=content,
     )
 
-    return(response.text)
+    return response.text
+
+def complete_sentence(sentence, synonym_dict):
+    prompt = f"""Complete this sentence using the best-fitting synonym for the blank(_):\n\n"{sentence}"\n\nOptions: {synonym_dict}"""
+    return get_response(prompt)
