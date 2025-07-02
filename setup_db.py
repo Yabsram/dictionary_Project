@@ -12,7 +12,6 @@ Should look like this:
 | 5  | sad      | gloomy    | "I feel so ___ when it rains."   |
 +----+----------+-----------+----------------------------------+
 
-get  sentence, get user inputted word, and its synonyms from wordapi
 '''
 
 def init_db():
