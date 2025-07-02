@@ -18,4 +18,3 @@ def get_all_synonyms(words):
     for word in words:
         synonym_dict[word] = get_synonyms(word)
     return synonym_dict
-

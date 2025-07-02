@@ -46,9 +46,6 @@ def main():
         else:
             print("Invalid input. Please enter 1, 2, 3, or 0.")
 
-
-    #ask if they want to find another synonym, view synonym history, or teminate program
-
 if __name__ == "__main__":
     print("Welcome to What's on the Tip of Your Tongue!")
     main()

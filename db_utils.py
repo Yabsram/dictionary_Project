@@ -4,11 +4,11 @@ from sqlalchemy.exc import OperationalError
 
 engine = db.create_engine('sqlite:///allwords.db')
 
+
 def store_synonyms(synonym_dict, sentence):
     add_rows = """
-        INSERT INTO table_allwords (original, synonyms, sentence)
-        VALUES (:original, :synonym, :sentence);
-    """
+                INSERT INTO table_allwords (original, synonyms, sentence)
+                VALUES (:original, :synonym, :sentence); """
 
     with engine.connect() as connection:
         #key is the original word, value is a list of its synonyms
@@ -22,7 +22,10 @@ def store_synonyms(synonym_dict, sentence):
         connection.commit()
 
 def fetch_all_synonyms(sentence):
-    select_row = "SELECT original, synonyms FROM table_allwords WHERE sentence = :sentence"
+    select_row = """
+                    SELECT original, synonyms FROM table_allwords 
+                    WHERE sentence = :sentence
+                """
     result_dict = {}
 
     with engine.connect() as connection:

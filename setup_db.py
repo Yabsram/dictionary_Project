@@ -25,6 +25,6 @@ def init_db():
         sentence TEXT DEFAULT NULL);
     '''
 
-   with engine.connect() as connection:
-      query_result = connection.execute(db.text(create_table_sql))
-      connection.commit()
+    with engine.connect() as connection:
+        query_result = connection.execute(db.text(create_table_sql))
+        connection.commit()
