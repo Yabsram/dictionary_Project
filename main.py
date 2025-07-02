@@ -8,11 +8,11 @@ from setup_db import init_db
 def main():
     while True:
         nav = input("\nWhat would you like to do? Select a number below.\n"
-                "1 - Find a word\n"
-                "2 - View synonym history\n"
-                "3 - Clear synonym history\n"
-                "0 - Terminate program\n"
-                "Enter choice: ").strip()
+                    "1 - Find a word\n"
+                    "2 - View synonym history\n"
+                    "3 - Clear synonym history\n"
+                    "0 - Terminate program\n"
+                    "Enter choice: ").strip()
         if nav == "1":
             #Finding synonyms
             init_db()

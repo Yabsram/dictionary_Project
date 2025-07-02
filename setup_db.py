@@ -15,15 +15,15 @@ Should look like this:
 '''
 
 def init_db():
-   engine = db.create_engine('sqlite:///allwords.db')
-   #create or connect to the table if it exists already
-   create_table_sql = '''
-      CREATE TABLE IF NOT EXISTS table_allwords (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      original TEXT NOT NULL,
-      synonyms TEXT NOT NULL,
-      sentence TEXT DEFAULT NULL);
-   '''
+    engine = db.create_engine('sqlite:///allwords.db')
+    #create or connect to the table if it exists already
+    create_table_sql = '''
+        CREATE TABLE IF NOT EXISTS table_allwords (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        original TEXT NOT NULL,
+        synonyms TEXT NOT NULL,
+        sentence TEXT DEFAULT NULL);
+    '''
 
    with engine.connect() as connection:
       query_result = connection.execute(db.text(create_table_sql))
