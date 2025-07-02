@@ -5,7 +5,7 @@ def get_user_input():
 
     while True:
         sentence = input("Enter a sentence with a blank(_) ending in . ? or !: ").strip()
-        if len(sentence) > 1 and sentence[-1] in ".?!":
+        if len(sentence) > 1 and "_" in sentence and sentence[-1] in ".?!":
             break
         else:
             print("Invalid sentence. Try again.")
