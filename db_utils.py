@@ -1,4 +1,6 @@
 import sqlalchemy as db
+from sqlalchemy.exc import OperationalError
+
 
 engine = db.create_engine('sqlite:///allwords.db')
 
@@ -30,3 +32,23 @@ def fetch_all_synonyms(sentence):
             syn = row[1]
             result_dict.setdefault(orig, []).append(syn)
     return result_dict
+
+def print_entire_table():
+    try:
+        query = "SELECT * FROM table_allwords"
+
+        with engine.connect() as connection:
+            result = connection.execute(db.text(query))
+            rows = result.fetchall()
+
+            if not rows:
+                print("The table is empty.")
+                return
+
+            print(" | ".join(result.keys()))
+            print("-" * 50)
+
+            for row in rows:
+                print(" | ".join(str(value) if value is not None else "NULL" for value in row))
+    except OperationalError:
+        print("Synonym history does not exist. Please look up words first.")
