@@ -10,7 +10,7 @@ def get_user_input():
         else:
             print("Invalid sentence. Try again.")
 
-    print(f"Enter words one by one. Type `{SENTINEL}` to finish.")
+    print(f"Enter words one by one. Type '{SENTINEL}' to finish.")
     while True:
         word = input("Enter a word: ").strip()
 
