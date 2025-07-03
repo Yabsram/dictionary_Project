@@ -15,7 +15,7 @@ def get_response(content):
     response = client.models.generate_content(
         model="gemini-2.5-flash",
         config=types.GenerateContentConfig(
-            "Complete the sentence only and list "
+            system_instruction="Complete the sentence only and list "
             "the top 5 synonyms from the options that can complete "
             "the sentence"
             ), contents=content,)
