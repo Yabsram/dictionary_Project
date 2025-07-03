@@ -58,7 +58,7 @@ def print_entire_table():
                 print(
                     " | ".join(
                         str(value) if value is not None
-                        else "NULL" 
+                        else "NULL"
                         for value in row
                     )
                 )

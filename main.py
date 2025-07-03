@@ -34,7 +34,7 @@ def main():
             # Clear synonym history
             while True:
                 msg = ("Are you sure you want to clear synonym "
-                    "history? (y/n): ")
+                "history? (y/n): ")
                 ready = input(msg)  
                 if ready == "y":
                     clear_table_allwords()

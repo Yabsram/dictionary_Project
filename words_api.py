@@ -3,6 +3,7 @@ import os
 
 API_KEY = os.getenv("WORDSAPI_KEY")
 
+
 def get_synonyms(word):
     url = f"https://wordsapiv1.p.rapidapi.com/words/{word}/synonyms"
     headers = {
