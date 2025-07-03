@@ -2,8 +2,10 @@ import sys
 from gen_api import complete_sentence
 from words_api import get_all_synonyms
 from user_input import get_user_input
-from db_utils import store_synonyms, fetch_all_synonyms, print_entire_table, clear_table_allwords
+from db_utils import store_synonyms, fetch_all_synonyms 
+from db_utils import print_entire_table, clear_table_allwords
 from setup_db import init_db
+
 
 def main():
     while True:
