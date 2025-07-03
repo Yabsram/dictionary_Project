@@ -20,5 +20,4 @@ def get_user_input():
             words.append(word.lower())
         else:
             print("Please try to only use letters.")
- 
     return sentence, words
