@@ -1,3 +1,5 @@
+[![Tests](https://github.com/Yabsram/dictionary_Project/actions/workflows/test.yaml/badge.svg)](https://github.com/Yabsram/dictionary_Project/actions/workflows/test.yaml)
+[![Check Style](https://github.com/Yabsram/dictionary_Project/actions/workflows/check.yaml/badge.svg)](https://github.com/Yabsram/dictionary_Project/actions/workflows/check.yaml)
 # What's on the Tip of Your Tongue?
 
 A synonym tool that helps users find the best word to complete a sentence using natural language APIs. 
