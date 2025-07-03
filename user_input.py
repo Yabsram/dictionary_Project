@@ -1,6 +1,6 @@
 def get_user_input():
     SENTINEL = "q"
-    # print(f"Enter words one by one. Type `{SENTINEL}` to finish.")
+
     words = []
 
     while True:
