@@ -14,6 +14,7 @@ def get_synonyms(word):
     response = requests.get(url, headers=headers)
     return response.json().get("synonyms", [])
 
+
 def get_all_synonyms(words):
     synonym_dict = {}
     for word in words:
