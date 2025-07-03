@@ -30,14 +30,15 @@ def fetch_all_synonyms(sentence):
 
     with engine.connect() as connection:
         result = (
-                    connection.execute(db.text(select_row)
-                    , {"sentence": sentence})
-                )
+                    connection.execute(db.text(select_row),
+                    {"sentence": sentence})
+                 )
         for row in result.fetchall():
             orig = row[0]
             syn = row[1]
             result_dict.setdefault(orig, []).append(syn)
     return result_dict
+
 
 def print_entire_table():
     try:
@@ -54,7 +55,8 @@ def print_entire_table():
             print("-" * 50)
 
             for row in rows:
-                print(" | ".join(str(value) if value is not None else "NULL" for value in row))
+                print(" | ".join(str(value) if value is not None 
+                else "NULL" for value in row))
     except OperationalError:
         print("Synonym history does not exist. Please look up words first.")
 

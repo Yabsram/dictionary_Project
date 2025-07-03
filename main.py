@@ -14,7 +14,7 @@ def main():
                     "0 - Terminate program\n"
                     "Enter choice: ").strip()
         if nav == "1":
-            #Finding synonyms
+            # Finding synonyms
             init_db()
             sentence, user_words = get_user_input()
             synonym_dict = get_all_synonyms(user_words)
@@ -26,10 +26,10 @@ def main():
             print("\nSuggested sentence completion: ")
             print(completed)
         elif nav == "2":
-            #View synonym history
+            # View synonym history
             print_entire_table()
         elif nav == "3":
-            #Clear synonym history
+            # Clear synonym history
             while True:
                 ready = input("Are you sure you want to clear synonym history? (y/n): ")
                 if ready == "y":

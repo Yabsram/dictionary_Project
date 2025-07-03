@@ -15,13 +15,13 @@ def get_response(content):
         model="gemini-2.5-flash",
         config=types.GenerateContentConfig(
         system_instruction="""
-                            Complete the sentence only and list the top 5 synonyms 
-                            from the options that can complete the sentence " 
+                                Complete the sentence only and list the top 5 synonyms 
+                                from the options that can complete the sentence "
                             """),
         contents=content,
     )
     return response.text
 
 def complete_sentence(sentence, synonym_dict):
-    prompt=f"""Complete this sentence using the best-fitting synonym for the blank(_):\n\n"{sentence}"\n\nOptions: {synonym_dict}"""
+    prompt = f"""Complete this sentence using the best-fitting synonym for the blank(_):\n\n"{sentence}"\n\nOptions: {synonym_dict}"""
     return get_response(prompt)
