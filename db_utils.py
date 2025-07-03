@@ -29,10 +29,10 @@ def fetch_all_synonyms(sentence):
     result_dict = {}
 
     with engine.connect() as connection:
-        result = (
-                    connection.execute(db.text(select_row),
-                    {"sentence": sentence})
-                 )
+        result = connection.execute(
+            db.text(select_row),
+            {"sentence": sentence}
+        )
         for row in result.fetchall():
             orig = row[0]
             syn = row[1]
