@@ -14,6 +14,7 @@ Should look like this:
 
 '''
 
+
 def init_db():
     engine = db.create_engine('sqlite:///allwords.db')
     # create or connect to the table if it exists already

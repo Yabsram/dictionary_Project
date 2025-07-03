@@ -21,8 +21,7 @@ class TestGetUserInput(unittest.TestCase):
         self.assertEqual(words, [])  # No words added
 
     @patch('builtins.input', side_effect=[
-    "fill _ this?", "123", "$$%", "validword", "q"
-    ])
+        "fill _ this?", "123", "$$%", "validword", "q"])
     def test_invalid_word_inputs(self, mock_input):
         sentence, words = get_user_input()
         self.assertEqual(sentence, "fill _ this?")

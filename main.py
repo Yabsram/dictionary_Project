@@ -33,14 +33,17 @@ def main():
         elif nav == "3":
             # Clear synonym history
             while True:
-                ready = input("Are you sure you want to clear synonym history? (y/n): ")
+                msg = ("Are you sure you want to clear synonym "
+                    "history? (y/n): ")
+                ready = input(msg)  
                 if ready == "y":
                     clear_table_allwords()
                     break
                 elif ready == "n":
                     break
                 else:
-                    print("Invalid input. Please select y (yes) or n (no).")
+                    print("Invalid input. Please select y (yes) "
+                    "or n (no).")
         elif nav == "0":
             # Exiting the program
             print("Exiting program.")
