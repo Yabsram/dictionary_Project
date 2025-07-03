@@ -44,8 +44,10 @@ def main():
                 elif ready == "n":
                     break
                 else:
-                    print("Invalid input. Please select y (yes) "
-                        "or n (no).")
+                    print(
+                        "Invalid input. Please select y (yes) "
+                        "or n (no)."
+                    )
         elif nav == "0":
             # Exiting the program
             print("Exiting program.")

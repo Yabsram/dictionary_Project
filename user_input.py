@@ -5,7 +5,7 @@ def get_user_input():
 
     while True:
         prompt = "Enter a sentence with a _ ending in . ? or !: "
-        sentence = input(prompt).strip()        
+        sentence = input(prompt).strip()
         if (
             len(sentence) > 1
             and "_" in sentence
