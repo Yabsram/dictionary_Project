@@ -23,7 +23,9 @@ def get_response(content):
 
 
 def complete_sentence(sentence, synonym_dict):
-    prompt = f"""Complete this sentence using the best-fitting synonym 
-            for the blank(_):\n\n"{sentence}"\n\nOptions: 
-            {synonym_dict}"""
+    prompt = (
+        f'Complete this sentence using the best-fitting\n'
+        f'synonym for the blank(_):\n\n"{sentence}"\n\n'
+        f'Options: {synonym_dict}'
+    )
     return get_response(prompt)

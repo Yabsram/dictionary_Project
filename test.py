@@ -1,6 +1,8 @@
 import unittest
 from unittest.mock import patch
 from user_input import get_user_input
+
+
 class TestGetUserInput(unittest.TestCase):
     @patch('builtins.input', side_effect=[
         "this sentence is bad",  # Invalid
