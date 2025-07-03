@@ -40,7 +40,7 @@ def main():
                 else:
                     print("Invalid input. Please select y (yes) or n (no).")
         elif nav == "0":
-            #Exiting the program
+            # Exiting the program
             print("Exiting program.")
             sys.exit(0)
         else:

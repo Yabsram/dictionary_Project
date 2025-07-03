@@ -55,10 +55,11 @@ def print_entire_table():
             print("-" * 50)
 
             for row in rows:
-                print(" | ".join(str(value) if value is not None 
+                print(" | ".join(str(value) if value is not None
                 else "NULL" for value in row))
     except OperationalError:
         print("Synonym history does not exist. Please look up words first.")
+
 
 def clear_table_allwords():
     try:
