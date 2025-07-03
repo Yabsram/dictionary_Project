@@ -37,7 +37,7 @@ def main():
                     "Are you sure you want to clear "
                     "synonym history? (y/n): "
                 )
-                ready = input(msg)  
+                ready = input(msg)
                 if ready == "y":
                     clear_table_allwords()
                     break
@@ -45,7 +45,7 @@ def main():
                     break
                 else:
                     print("Invalid input. Please select y (yes) "
-                    "or n (no).")
+                        "or n (no).")
         elif nav == "0":
             # Exiting the program
             print("Exiting program.")
